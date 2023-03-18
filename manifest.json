@@ -13,7 +13,7 @@
         ]
     },
     "preview":"preview.png",
-    "requirements":["ListScrollFix"],
+    "requirements":["list-scroll-fix"],
     "hijacks":{
         ">= 2.10.0":{
             "orpheus://orpheus/pub/core.":{
