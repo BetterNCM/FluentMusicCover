@@ -126,12 +126,7 @@
                 loadCoverImage(img);
             }
         }
-        this.mainPlugin.lazyLoad = betterncm.utils.debounce(lazyLoad, 100);
-        this.mainPlugin.cached = cached;
-        window.addEventListener("wheel", lazyLoad);
-        document.querySelector(".g-mn").addEventListener("scroll", lazyLoad, { passive: true });
-        //setInterval(lazyLoad, 1000);
-        addEventListener("hashchange", lazyLoad);
+        window.FluentMusicLazyLoad = betterncm.utils.debounce(lazyLoad, 100);
 
 
         // check if hijack succeeded

@@ -6,7 +6,11 @@
     "description": "展示歌单内歌曲封面，且尽量保证不造成卡顿",
     "betterncm_version": ">=1.0.0",
     "injects": {
-        "Main": []
+        "Main": [
+            {
+                "file": "index.js"
+            }
+        ]
     },
     "preview":"preview.png",
     "requirements":["list-scroll-fix"],
