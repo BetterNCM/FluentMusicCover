@@ -69,7 +69,7 @@ plugin.onLoad(async function () {
         const toast = document.createElement('div');
         toast.classList.add('fmc-toast');
         toast.style.opacity = '0';
-        toast.innerText = "FluentMusicCover Hijack 失败，插件将不会启用"
+        toast.innerText = "FluentMusicCover Hijack 失败，插件将不会启用，请尝试重启网易云"
         document.body.appendChild(toast);
         setTimeout(() => toast.style.opacity = '1');
         setTimeout(() => {
