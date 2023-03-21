@@ -62,4 +62,19 @@ plugin.onLoad(async function () {
     (await waitForElementAsync(".g-mn")).addEventListener("scroll", window.FluentMusicLazyLoad, { passive: true });
     //setInterval(lazyLoad, 1000);
     addEventListener("hashchange", window.FluentMusicLazyLoad);
+
+    // check if hijack succeeded
+    const hijackSucceeded = (await betterncm.app.getSucceededHijacks()).includes("FluentMusicCover::fluentMusicCover.hackNCMTemplateParse");
+    if (!hijackSucceeded) {
+        const toast = document.createElement('div');
+        toast.classList.add('fmc-toast');
+        toast.style.opacity = '0';
+        toast.innerText = "FluentMusicCover Hijack 失败，插件将不会启用"
+        document.body.appendChild(toast);
+        setTimeout(() => toast.style.opacity = '1');
+        setTimeout(() => {
+            toast.style.opacity = '0';
+            setTimeout(() => toast.remove(), 200);
+        }, 10000);
+    }
 });
